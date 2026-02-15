@@ -1,0 +1,29 @@
+.wrongFlag {
+    height: 10rem;
+    background-color:  red;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.nationalFlag {
+    height: 10rem;
+    background-color:  green;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.right-cercle {
+    height:  5rem;
+    width: 5rem;
+    border-radius: 100%;
+    background-color: red;
+}
+.wrong-cercle {
+    height:  5rem;
+    width: 5rem;
+    border-radius: 100%;
+    background-color: green;
+}

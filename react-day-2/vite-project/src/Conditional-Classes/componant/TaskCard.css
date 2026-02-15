@@ -1,0 +1,38 @@
+    .task-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .task-title {
+        font-size: 20px;
+        color: #1f2937;
+        margin-bottom: 10px;
+    }
+
+    .task-title-completed {
+        font-size: 20px;
+        color: #9ca3af;
+        margin-bottom: 10px;
+        text-decoration: line-through;
+    }
+
+    .status-done {
+        background-color: #d1fae5;
+        color: #065f46;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .status-pending {
+        background-color: #fef3c7;
+        color: #92400e;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: bold;
+    }
