@@ -1,16 +1,22 @@
+import React from "react"
+
+
+
 export default function Main() {
     const ingredients = ["Chicken", "Oregano", "Tomatoes"]
 
-    
+
     /**
      * Challenge:
      * Add an `onSubmit` event listener on the form. Have the function
      * simply console.log("Form submitted!") for now
     */
-   
-   
-   function handleSubmit(event) {
-       // console.log(event)
+
+
+    function handleSubmit(event) {
+        const kk = React.useState()
+        console.log(kk)
+        // console.log(event)
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
@@ -18,11 +24,11 @@ export default function Main() {
         console.log(ingredients)
     }
     const ingredientsListItems = ingredients.map(item => <li key={item}>{item}</li>)
-    
+
 
     return (
         <main>
-            <form onSubmit={handleSubmit}  className="add-ingredient-form">
+            <form onSubmit={handleSubmit} className="add-ingredient-form">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
