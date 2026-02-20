@@ -3,8 +3,10 @@ import React from "react"
 
 
 export default function Main() {
-    const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+    // const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+    const [ingredients , ingredientsFunc] = React.useState([])
 
+    const ingredientsListItems = ingredients.map(item => <li key={item}>{item}</li>)
 
     /**
      * Challenge:
@@ -14,16 +16,16 @@ export default function Main() {
 
 
     function handleSubmit(event) {
-        const kk = React.useState()
-        console.log(kk)
+
         // console.log(event)
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
-        ingredients.push(newIngredient)
-        console.log(ingredients)
+        // console.log(newIngredient)
+        ingredientsFunc(pre => [...pre, newIngredient])
+        
+
     }
-    const ingredientsListItems = ingredients.map(item => <li key={item}>{item}</li>)
 
 
     return (
