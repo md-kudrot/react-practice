@@ -1,5 +1,44 @@
 import ReactDOM from 'react-dom/client';
 
+function singUp(formData) {
+  const email = formData.get("email")
+  const password = formData.get("password")
+  console.log(email)
+  console.log(password)
+}
+
+
+function App() {
+  return (
+    <section id='main-section'>
+      <h1>Signup form</h1>
+      <form action={singUp}>
+        <label htmlFor="email">Email:</label>
+        <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
+        <br />
+        
+        <label htmlFor="password">Password:</label>
+        <input id="password" type="password" name="password" />
+        <br />
+        
+        <button>Submit</button>
+        
+      </form>
+    </section>
+  )
+}
+
+
+
+
+
+
+/*
+**********************************
+|        long way to do that      |
+**********************************
+
+
 function handleSubmit(even) {
   even.preventDefault()
   // console.log(even)
@@ -36,4 +75,7 @@ function App() {
 }
 
 // ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+*/
+
 export default App
