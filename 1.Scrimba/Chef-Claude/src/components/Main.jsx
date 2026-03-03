@@ -8,19 +8,12 @@ export default function Main() {
 
     const ingredientsListItems = ingredients.map(item => <li key={item}>{item}</li>)
 
-    /**
-     * Challenge:
-     * Add an `onSubmit` event listener on the form. Have the function
-     * simply console.log("Form submitted!") for now
-    */
-
-
-    function handleSubmit(event) {
+    function addIngredient(event) {
 
         // console.log(event)
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
-        const newIngredient = formData.get("ingredient")
+        // event.preventDefault()
+        // const formData = new FormData(event.currentTarget)
+        const newIngredient = event.get("ingredient")
         // console.log(newIngredient)
         ingredientsFunc(pre => [...pre, newIngredient])
         
@@ -30,7 +23,7 @@ export default function Main() {
 
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form action={addIngredient} className="add-ingredient-form">
                 <input
                     type="text"
                     placeholder="e.g. oregano"
