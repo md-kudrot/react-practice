@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 function singUp(formData) {
   const email = formData.get("email")
   const password = formData.get("password")
+  const employmentStatus = formData.get("employmentStatus")
   console.log(email)
   console.log(password)
+  console.log(employmentStatus)
 }
 
 
@@ -16,13 +18,32 @@ function App() {
         <label htmlFor="email">Email:</label>
         <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
         <br />
-        
+
         <label htmlFor="password">Password:</label>
         <input id="password" type="password" name="password" />
         <br />
-        
+
+        <label htmlFor="description">Description:</label>
+        <textarea name="description" id="description" defaultValue="This is a description"></textarea>
+
+        <fieldset>
+          <legend>Employment Status:</legend>
+          <label>
+            <input type="radio" name="employmentStatus" value="unemployed" />
+            Unemployed
+          </label>
+          <label>
+            <input type="radio" name="employmentStatus" value="part-time" />
+            Part-time
+          </label>
+          <label>
+            <input type="radio" name="employmentStatus" defaultChecked={true} value="full-time" />
+            Full-time
+          </label>
+        </fieldset>
+
         <button>Submit</button>
-        
+
       </form>
     </section>
   )
