@@ -4,6 +4,10 @@ function singUp(formData) {
   const email = formData.get("email")
   const password = formData.get("password")
   const employmentStatus = formData.get("employmentStatus")
+
+  const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+  console.log(dietaryRestrictions)
+
   console.log(email)
   console.log(password)
   console.log(employmentStatus)
@@ -39,6 +43,22 @@ function App() {
           <label>
             <input type="radio" name="employmentStatus" defaultChecked={true} value="full-time" />
             Full-time
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dietary restrictions:</legend>
+          <label>
+            <input type="checkbox" name="dietaryRestriction" value="Kosher" />
+            Kosher
+          </label>
+          <label>
+            <input type="checkbox" name="dietaryRestriction" value="Vegan" />
+            Vegan
+          </label>
+          <label>
+            <input type="checkbox" name="dietaryRestriction" defaultChecked={true} value="gluten-free" />
+            gluten-free
           </label>
         </fieldset>
 
