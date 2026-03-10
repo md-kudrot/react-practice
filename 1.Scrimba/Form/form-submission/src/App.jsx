@@ -5,7 +5,7 @@ function singUp(formData) {
   const password = formData.get("password")
   const employmentStatus = formData.get("employmentStatus")
 
-  const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+  const dietaryRestrictions = formData.getAll("dietaryRestriction")
   console.log(dietaryRestrictions)
 
   console.log(email)
