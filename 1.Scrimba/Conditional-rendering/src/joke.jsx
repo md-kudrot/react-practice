@@ -31,9 +31,10 @@ function Joke(props) {
     return(
         <div>
             {props.setup && <h3>{props.setup}</h3>}
-            {istrue && <h3>{props.punchline}</h3>}
+            {istrue && <p>{props.punchline}</p>}
             <hr />
-            <button onClick={toggoleFun}>click</button>
+            <button onClick={toggoleFun}>{istrue ? "hide":"show"} punchline</button>
+           
        
         </div>
     )
