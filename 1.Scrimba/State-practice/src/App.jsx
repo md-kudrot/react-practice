@@ -1,4 +1,5 @@
 import React from "react"
+import Count from "./componants/count"
 
 export default function App() {
 
@@ -41,7 +42,10 @@ export default function App() {
       <h1>How many times will Bob say "state" in this section?</h1>
       <div className="counter">
         <button onClick={minus} className="minus" aria-label="Decrease count">–</button>
-        <h2 className="count">{count}</h2>
+        {/* <h2 className="count">{count}</h2> */}
+        <Count
+          number = {count}
+        />
         <button onClick={add} className="plus" aria-label="Increase count">+</button>
       </div>
     </main>
