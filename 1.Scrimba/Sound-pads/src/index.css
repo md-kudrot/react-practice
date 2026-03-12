@@ -28,6 +28,6 @@ button {
     opacity: 0.1;
 }
 
-button.on {
+.on {
     opacity: 1;
 }
