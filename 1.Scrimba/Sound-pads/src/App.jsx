@@ -57,6 +57,30 @@
 
 
 // part3
+// import React from "react"
+// import padsData from "./pads"
+// import Pad from "./Pad"
+
+// export default function App() {
+//     const [pads, setPads] = React.useState(padsData)
+
+//     const buttonElements = pads.map(pad => (
+//         <Pad key={pad.id} color={pad.color} on={pad.on} />
+//     ))
+    
+//     return (
+//         <main>
+//             <div className="pad-container">
+//                 {buttonElements}
+//             </div>
+//         </main>
+//     )
+// }
+
+
+// part 4
+// long way to that
+
 import React from "react"
 import padsData from "./pads"
 import Pad from "./Pad"
@@ -64,8 +88,14 @@ import Pad from "./Pad"
 export default function App() {
     const [pads, setPads] = React.useState(padsData)
 
+    function toggle(id) {
+        console.log(id)
+        setPads(prev => prev.map(item => item.id === id ? {...item, on: !item.on} : item))
+    }
+
+    
     const buttonElements = pads.map(pad => (
-        <Pad key={pad.id} color={pad.color} on={pad.on} />
+        <Pad toggle={toggle} id={pad.id} key={pad.id} color={pad.color} on={pad.on}/>
     ))
     
     return (
