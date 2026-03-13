@@ -11,11 +11,16 @@ export default function Main() {
 
     function addIngredient(event) {
 
+        
         // console.log(event)
         // event.preventDefault()
         // const formData = new FormData(event.currentTarget)
-        const newIngredient = event.get("ingredient")
-        // console.log(newIngredient)
+        const newIngredient =event.get("ingredient")
+        console.log(newIngredient === "")
+        
+        if (newIngredient === "") {
+            return
+        }
         ingredientsFunc(pre => [...pre, newIngredient])
 
 
